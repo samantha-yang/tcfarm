@@ -1,11 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>T&C Farm</title>
-</head>
-<body>
-  <h1>T&C Farm</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="dist/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T&C Farm</title>
+  </head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Navigation -->
+  <nav class="w-full h-full bg-white/50 backdrop-blur border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <h1 class="text-2xl sm:text-4xl font-bold text-grey-400">T&C FARM</h1>
+
+      <!-- Desktop links -->
+      <div class="hidden sm:flex gap-6 text-sm font-medium tracking-wide">
+        <a href="/" class="nav-link">HOME</a>
+        <a href="pages/about.html" class="nav-link">ABOUT</a>
+        <a href="pages/gallery.html" class="nav-link">GALLERY</a>
+        <a href="#contact" class="nav-link">CONTACT US</a>
+      </div>
+
+      <!-- Hamburger button (mobile only) -->
+      <button id="menu-btn" class="sm:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+        <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300" id="line1"></span>
+        <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300" id="line2"></span>
+        <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300" id="line3"></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu" class="sm:hidden hidden flex-col px-6 pb-4 gap-4 text-sm font-medium tracking-wide border-t border-gray-100 bg-white/95">
+      <a href="/" class="nav-link pt-4">Home</a>
+      <a href="pages/about.html" class="nav-link">About Me</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-grey-50 to-white">
+    <div id="hero-particles" class="absolute top-0 left-0 w-full h-full"></div>
+    <div class="max-w-3xl text-center relative z-10">
+      <h2 class="text-4xl sm:text-6xl font-bold mb-6 text-grey-400 fade-up fade-up-delay-2">T&C FARM</h2>
+      <p class="text-xl text-gray-700 mb-8 fade-up fade-up-delay-2">
+        Established 2020.
+      </p>
+    </div>
+  </section>
 </body>
 </html>
