@@ -4,49 +4,183 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="dist/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="T&C Farm is a family-run flower farm in the Pacific Northwest, selling seasonal flowers at Pike Place Market in Seattle.">
     <title>T&C Farm</title>
   </head>
-<body class="bg-white text-gray-900 font-sans">
+<body style="background-color: #f0f4ee; color: #2d3b2d; font-family: sans-serif;">
 
-  <!-- Navigation -->
-  <nav class="w-full h-full bg-white/50 backdrop-blur border-b border-gray-200">
+  <!-- Navigation (hidden until scroll) -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full backdrop-blur border-b opacity-0 pointer-events-none transition-opacity duration-500 z-50" style="background-color: #4a7c59ee; border-color: #6b8f71;">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-      <h1 class="text-2xl sm:text-4xl font-bold text-grey-400">T&C FARM</h1>
-
-      <!-- Desktop links -->
+      <h1 class="text-xl font-bold" style="color: #fde047;">T&C FARM</h1>
       <div class="hidden sm:flex gap-6 text-sm font-medium tracking-wide">
-        <a href="/" class="nav-link">HOME</a>
-        <a href="pages/about.html" class="nav-link">ABOUT</a>
-        <a href="pages/gallery.html" class="nav-link">GALLERY</a>
-        <a href="#contact" class="nav-link">CONTACT US</a>
+        <a href="/" class="transition-colors duration-200" style="color: #e8f0e8;" onmouseover="this.style.color='#fde047'" onmouseout="this.style.color='#e8f0e8'">HOME</a>
+        <a href="pages/about.html" class="transition-colors duration-200" style="color: #e8f0e8;" onmouseover="this.style.color='#fde047'" onmouseout="this.style.color='#e8f0e8'">ABOUT</a>
+        <a href="pages/gallery.html" class="transition-colors duration-200" style="color: #e8f0e8;" onmouseover="this.style.color='#fde047'" onmouseout="this.style.color='#e8f0e8'">GALLERY</a>
+        <a href="#contact" class="transition-colors duration-200" style="color: #e8f0e8;" onmouseover="this.style.color='#fde047'" onmouseout="this.style.color='#e8f0e8'">CONTACT US</a>
       </div>
-
-      <!-- Hamburger button (mobile only) -->
-      <button id="menu-btn" class="sm:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
-        <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300" id="line1"></span>
-        <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300" id="line2"></span>
-        <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300" id="line3"></span>
-      </button>
-    </div>
-
-    <!-- Mobile dropdown -->
-    <div id="mobile-menu" class="sm:hidden hidden flex-col px-6 pb-4 gap-4 text-sm font-medium tracking-wide border-t border-gray-100 bg-white/95">
-      <a href="/" class="nav-link pt-4">Home</a>
-      <a href="pages/about.html" class="nav-link">About Me</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#contact" class="nav-link">Contact</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-grey-50 to-white">
-    <div id="hero-particles" class="absolute top-0 left-0 w-full h-full"></div>
+  <section class="relative flex items-center justify-center" style="min-height: 100vh;">
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/homepage/Sunflower.jpeg')"></div>
+    <div class="absolute inset-0" style="background-color: #4a7c5966;"></div>
     <div class="max-w-3xl text-center relative z-10">
-      <h2 class="text-4xl sm:text-6xl font-bold mb-6 text-grey-400 fade-up fade-up-delay-2">T&C FARM</h2>
-      <p class="text-xl text-gray-700 mb-8 fade-up fade-up-delay-2">
-        Established 2020.
-      </p>
+      <h2 class="text-7xl sm:text-9xl font-bold mb-6" style="color: #fde047;">T&C FARM</h2>
+      <p class="text-xl mb-8 tracking-widest uppercase" style="color: #e8f0e8;">Established 2020</p>
     </div>
   </section>
+
+  <!-- Our Story -->
+  <section id="history" class="relative" style="min-height: 100vh;">
+    <div class="absolute inset-0">
+      <img src="assets/homepage/Pike Place Skyline.jpeg" alt="Farm" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0" style="background-color: rgba(45, 59, 45, 0.65);"></div>
+    <div class="relative z-10 flex items-center justify-center px-6" style="min-height: 100vh;">
+      <div class="max-w-4xl">
+        <h2 class="text-xl font-bold mb-6 tracking-widest" style="color: #fde047;">OUR STORY</h2>
+        <p class="text-xl leading-relaxed mb-4" style="color: #e8f0e8;">
+          T&C Farm was born in 2020, an unlikely time to start something new. When the world slowed down, our family saw an opportunity to grow, quite literally. What began as a leap of faith during one of the hardest years in recent memory quickly took root into something we are deeply proud of.
+        </p>
+        <p class="text-xl leading-relaxed" style="color: #e8f0e8;">
+          But our story runs deeper than 2020. Flowers have been a part of our family for decades. Family members have been running their own floral business since 1995, and growing up in that world shaped everything that goes into T&C Farm. This is the continuation of that love, grown here in the Pacific Northwest by a family that has always believed in building something beautiful.        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section id="about" class="relative flex items-center justify-center px-6" style="min-height: 100vh; background-color: #b2c9ad;">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-xl font-bold tracking-widest uppercase mb-6" style="color: #4a7c59;">WHO WE ARE</p>
+      <blockquote class="text-3xl sm:text-4xl font-bold leading-snug mb-8" style="color: #2d3b2d;">
+        "We wake up early, get our hands dirty, and pour care into every stem we grow."
+      </blockquote>
+      <p class="leading-relaxed max-w-2xl mx-auto" style="color: #374151;">
+        A small family farm, built from the ground up. Every stem grown here reflects the hard work and heart that goes into everything T&C Farm does. Founded by two immigrants who carried a deep love for the land across oceans, this farm is proof that something beautiful can grow from dedication, patience, and a whole lot of early mornings.
+      </p>
+      <p class="text-lg font-medium mt-8 pt-8 tracking-wide" style="color: #4a7c59; border-top: 1px solid #4a7c5940;">
+        Find us at Pike Place Market in Seattle, where we bring whatever is in season straight from the farm.</p>
+    </div>
+  </section>
+
+  <!-- Our History -->
+  <section id="roots" class="relative" style="min-height: 100vh;">
+    <div class="absolute inset-0">
+      <img src="assets/homepage/Farm 3.jpeg" alt="Farm" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-10 flex items-center" style="min-height: 100vh;">
+      <div class="w-full sm:w-1/2 sm:ml-auto p-12 flex flex-col justify-center" style="background-color: rgba(107, 143, 113, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-left: 1px solid rgba(255,255,255,0.2);">
+        <h2 class="text-xl font-bold mb-6 tracking-widest" style="color: #fde047;">OUR HISTORY</h2>
+        <p class="leading-relaxed mb-4" style="color: #ffffff;">
+          T&C Farm is part of a much larger story. After the Vietnam War, thousands of Hmong families resettled across the United States, many finding their way to the Pacific Northwest. For these families, farming was more than a way to make a living. It was a way to stay rooted, to preserve culture, and to rebuild community in a new land.
+        </p>
+        <p class="leading-relaxed" style="color: #ffffff;">
+          Our farm carries that history forward. Founded by two immigrants who brought with them a love for the earth and the knowledge of what it means to build something from nothing, this farm is rooted in that legacy. Every season, every harvest, and every bouquet is a small continuation of something that started long before this farm existed. That is what T&C Farm is built on.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Grow -->
+  <section id="grow" class="relative flex items-center px-6 py-24" style="min-height: 100vh; background-color: #f0f4ee;">
+    <div class="max-w-6xl mx-auto w-full">
+      <div class="flex flex-col sm:flex-row items-center gap-12">
+
+        <!-- Text -->
+        <div class="flex-1">
+          <h2 class="text-xl font-bold mb-6 tracking-widest" style="color: #4a7c59;">FROM OUR FIELDS</h2>
+          <p class="leading-relaxed mb-6" style="color: #374151;">
+            We grow seasonal flowers, which means what we offer changes with the time of year. Everything we sell comes straight from our fields to you. We don't source from wholesalers or outside growers, which means what's available depends entirely on what's blooming that week.
+          </p>
+
+          <div class="flex flex-col gap-4">
+            <div>
+              <p class="font-bold mb-1" style="color: #4a7c59;">SPRING</p>
+              <p class="leading-relaxed" style="color: #374151;">Tulips and daffodils are among the first signs of life on the farm, filling the fields with color after a long winter.</p>
+            </div>
+            <div>
+              <p class="font-bold mb-1" style="color: #4a7c59;">LATE SPRING</p>
+              <p class="leading-relaxed" style="color: #374151;">Peonies take center stage, lush and fragrant at their peak for just a few short weeks.</p>
+            </div>
+            <div>
+              <p class="font-bold mb-1" style="color: #4a7c59;">SUMMER INTO FALL</p>
+              <p class="leading-relaxed" style="color: #374151;">The fields come alive with lilies, dahlias, sunflowers, and so much more. This is our most abundant season, with new varieties coming into bloom week after week.</p>
+            </div>
+            <div>
+              <p class="font-bold mb-1" style="color: #4a7c59;">AFTER FALL</p>
+              <p class="leading-relaxed" style="color: #374151;">When the winter frost settles over the farm and the last fresh blooms fade, we craft dried flower bouquets from what the farm has given us. A way to hold onto the beauty of the year a little longer.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="flex-1 w-full">
+          <div class="relative">
+            <div class="overflow-hidden rounded-lg">
+              <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out">
+                <img src="assets/homepage/Farm 1.jpeg" class="w-full flex-shrink-0 h-96 object-cover" alt="Farm" />
+                <img src="assets/homepage/Farm 2.jpeg" class="w-full flex-shrink-0 h-96 object-cover" alt="Farm" />
+                <img src="assets/homepage/Farm 4.jpeg" class="w-full flex-shrink-0 h-96 object-cover" alt="Farm" />
+                <img src="assets/homepage/Sunflower.jpeg" class="w-full flex-shrink-0 h-96 object-cover" alt="Sunflower" />
+              </div>
+            </div>
+            <button id="prev-btn" class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full w-10 h-10 flex items-center justify-center text-xl transition-colors duration-200" style="background-color: #4a7c59cc; color: #fde047;" onmouseover="this.style.backgroundColor='#4a7c59'" onmouseout="this.style.backgroundColor='#4a7c59cc'">
+              &#8592;
+            </button>
+            <button id="next-btn" class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full w-10 h-10 flex items-center justify-center text-xl transition-colors duration-200" style="background-color: #4a7c59cc; color: #fde047;" onmouseover="this.style.backgroundColor='#4a7c59'" onmouseout="this.style.backgroundColor='#4a7c59cc'">
+              &#8594;
+            </button>
+          </div>
+          <div id="dots" class="flex justify-center gap-2 mt-4"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.remove('opacity-0', 'pointer-events-none');
+        navbar.classList.add('opacity-100');
+      } else {
+        navbar.classList.add('opacity-0', 'pointer-events-none');
+        navbar.classList.remove('opacity-100');
+      }
+    });
+
+    const track = document.getElementById('carousel-track');
+    const totalSlides = track.children.length;
+    let current = 0;
+
+    const dotsContainer = document.getElementById('dots');
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'w-2 h-2 rounded-full transition-colors duration-200';
+      dot.style.backgroundColor = i === 0 ? '#4a7c59' : '#b2c9ad';
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    function goTo(index) {
+      current = index;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      document.querySelectorAll('#dots button').forEach((dot, i) => {
+        dot.style.backgroundColor = i === current ? '#4a7c59' : '#b2c9ad';
+      });
+    }
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      goTo(current === 0 ? totalSlides - 1 : current - 1);
+    });
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+      goTo(current === totalSlides - 1 ? 0 : current + 1);
+    });
+  </script>
+
 </body>
 </html>
