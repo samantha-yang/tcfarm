@@ -1,6 +1,6 @@
 # T&C Farm Website
 
-A simple website for T&C Farm, my family's flower business at Pike Place Market in Seattle, WA. Built as a freelance project.
+A simple website for T&C Farm, my family's flower business at Pike Place Market in Seattle, WA. Built as a personal project for my portfolio.
 
 ## Pages
 
